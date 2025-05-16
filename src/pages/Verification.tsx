@@ -105,15 +105,24 @@ const Verification = () => {
     
     setIsLoading(true);
     
-    // Simulate API call - For demo, we'll show an error
+    // Simulate API call - For demo purposes, we'll show success and redirect if code is "123456"
     setTimeout(() => {
       setIsLoading(false);
-      setIsError(true);
-      toast({
-        title: "Verification Failed",
-        description: "The code you entered is invalid. Please try again.",
-        variant: "destructive",
-      });
+      
+      if (code.join('') === "123456") {
+        navigate('/redirect-dashboard');
+        toast({
+          title: "Verification Successful",
+          description: "You will be redirected to the dashboard.",
+        });
+      } else {
+        setIsError(true);
+        toast({
+          title: "Verification Failed",
+          description: "The code you entered is invalid. Please try again.",
+          variant: "destructive",
+        });
+      }
     }, 1000);
   };
 

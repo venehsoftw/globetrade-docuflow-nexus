@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout';
@@ -30,11 +29,28 @@ const Login = () => {
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      navigate('/verification');
-      toast({
-        title: "Verification Required",
-        description: "Please check your email for a verification code",
-      });
+      
+      // For demo purposes, go to verification page if it's a first login
+      // otherwise go straight to dashboard
+      if (userId === 'newuser') {
+        navigate('/verification');
+        toast({
+          title: "Verification Required",
+          description: "Please check your email for a verification code",
+        });
+      } else if (userId === 'resetpassword') {
+        navigate('/new-password');
+        toast({
+          title: "Password Reset",
+          description: "Please set up your new password",
+        });
+      } else {
+        navigate('/dashboard');
+        toast({
+          title: "Login Successful",
+          description: "Welcome back!",
+        });
+      }
     }, 1000);
   };
 

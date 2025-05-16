@@ -9,6 +9,9 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Verification from "./pages/Verification";
+import Dashboard from "./pages/Dashboard";
+import NewPassword from "./pages/NewPassword";
+import Redirect from "./pages/Redirect";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +27,26 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/verification" element={<Verification />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/new-password" element={<NewPassword />} />
+          <Route 
+            path="/redirect-dashboard" 
+            element={
+              <Redirect 
+                target="/dashboard" 
+                message="We are redirecting you to initial dashboard. Please wait" 
+              />
+            } 
+          />
+          <Route 
+            path="/redirect-login" 
+            element={
+              <Redirect 
+                target="/login" 
+                message="We are redirecting you to Login page. Please wait a few moments..." 
+              />
+            } 
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

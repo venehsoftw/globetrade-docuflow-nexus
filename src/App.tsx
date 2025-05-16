@@ -16,6 +16,7 @@ import Redirect from "./pages/Redirect";
 import NotFound from "./pages/NotFound";
 import Reports from "./pages/Reports";
 import Search from "./pages/Search";
+import Billing from "./pages/Billing";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/new-password" element={<NewPassword />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/billing" element={<Billing />} />
           <Route 
             path="/redirect-dashboard" 
             element={

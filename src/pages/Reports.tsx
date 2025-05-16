@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import { Button } from '@/components/ui/button';
 
@@ -23,11 +23,11 @@ const Reports = () => {
         {/* Sidebar */}
         <div className="w-64 bg-gray-100 border-r border-gray-200">
           <nav className="flex flex-col p-2">
-            <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Dashboard</div>
-            <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">New commercial activity</div>
-            <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Search</div>
+            <Link to="/dashboard" className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Dashboard</Link>
+            <Link to="/new-commercial-activity" className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">New commercial activity</Link>
+            <Link to="/search" className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Search</Link>
             <div className="bg-white p-2 font-medium border border-gray-300 mb-1">Reports</div>
-            <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Billing</div>
+            <Link to="/billing" className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Billing</Link>
             <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Profile</div>
             <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Setting</div>
           </nav>

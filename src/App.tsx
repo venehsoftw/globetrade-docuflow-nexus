@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Verification from "./pages/Verification";
 import Dashboard from "./pages/Dashboard";
+import NewCommercialActivity from "./pages/NewCommercialActivity";
 import NewPassword from "./pages/NewPassword";
 import Redirect from "./pages/Redirect";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/signup" element={<Signup />} />
           <Route path="/verification" element={<Verification />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/new-commercial-activity" element={<NewCommercialActivity />} />
           <Route path="/new-password" element={<NewPassword />} />
           <Route 
             path="/redirect-dashboard" 

@@ -14,6 +14,8 @@ import NewCommercialActivity from "./pages/NewCommercialActivity";
 import NewPassword from "./pages/NewPassword";
 import Redirect from "./pages/Redirect";
 import NotFound from "./pages/NotFound";
+import Reports from "./pages/Reports";
+import Search from "./pages/Search";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/new-commercial-activity" element={<NewCommercialActivity />} />
           <Route path="/new-password" element={<NewPassword />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/search" element={<Search />} />
           <Route 
             path="/redirect-dashboard" 
             element={

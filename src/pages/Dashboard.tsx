@@ -36,8 +36,8 @@ const Dashboard = () => {
           <nav className="flex flex-col p-2">
             <div className="bg-white p-2 font-medium border border-gray-300 mb-1">Dashboard</div>
             <Link to="/new-commercial-activity" className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">New commercial activity</Link>
-            <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Search</div>
-            <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Reports</div>
+            <Link to="/search" className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Search</Link>
+            <Link to="/reports" className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Reports</Link>
             <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Billing</div>
             <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Profile</div>
             <div className="bg-gray-200 p-2 hover:bg-gray-300 border border-gray-300 mb-1">Setting</div>
